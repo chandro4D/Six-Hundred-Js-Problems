@@ -24,3 +24,14 @@ TotalSpend = 1750
 // practice problem 7 :
 GetOnePerson = 56.25 Taka
 RemainingTaka = 2 Taka
+
+// practice problem 8 :
+Right = (15>12),(4<10)
+wrong = (7>9)
+
+// practice problem 9 :
+Average = 41.5
+
+// practice problem 10:
+Area = 153.86
+
