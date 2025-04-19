@@ -42,10 +42,52 @@ else if(bankBalance <1000){
 else{
     console.log("Enjoy your life")
 }
+
 // practice problem 4:
+const marks = 60;
+if(marks > 80){
+    console.log("A+");
+}
+else if( marks > 50){
+    console.log("Pass");
+}
+else{
+    console.log("fail");
+}
+
 // practice problem 5:
+const page = 447;
+if(page > 500){
+    console.log("heart-attack size book");
+}
+else if(page > 100){
+    console.log("Mid-size book");
+}
+else{
+    console.log("Small book");
+}
+
 // practice problem 6:
+const temperature = 25;
+
+if(temperature > 20){
+  console.log("Hot Hot")
+}
+else if(temperature > 0){
+  console.log("Cool Cool");
+}
+else{
+  console.log("Ice");
+}
+
 // practice problem 7:
-// practice problem 8:
-// practice problem 9:
-// practice problem 10:
+const level = 0;
+if(level > 50){
+    console.log("Pro Gamer");
+}
+else if(level > 10){
+    console.log("Expert");
+}
+else{
+    console.log("novice");
+}
