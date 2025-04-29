@@ -19,6 +19,10 @@ const laptop = {
     model: "Inspiron",
     price: 45000
 }
+for(const key in laptop){
+    const value = laptop[key];
+    console.log(key,value);
+}
 
 
 // practice problem 4:
@@ -27,6 +31,10 @@ const phone = {
     model: "Galaxy s21",
     price: 85000
 }
+const keys = Object.keys(phone);
+for(const key of keys){
+    console.log(key,phone[key]);
+}
 
 // practice problem 5:
 const bike = {
@@ -34,12 +42,16 @@ const bike = {
     price: 120000,
     model: "Splendor"
 }
+console.log(Object.values(bike));
 
 // practice problem 6:
 const books = {
     book1: "Harry Potter",
     book2: "The Hobbit",
     book3: "Game of Thrones"
+}
+for(const book in books){
+    console.log(books[book]);
 }
 
 // practice problem 7:
@@ -49,6 +61,11 @@ const numbers = {
     c: 30,
     d: 40
 }
+let sum = 0;
+for(let num in numbers){
+    sum = sum + numbers[num];
+}
+console.log(sum);
 
 // practice problem 8:
 const player = {
@@ -56,6 +73,7 @@ const player = {
     team: "Argentina",
     goals: 91
 }
+console.log(Object.values(player));
 
 // practice problem 9:
 const building = {
@@ -67,4 +85,7 @@ const building = {
     type: "Commercial"
 
 }
-// practice problem 10:
+for(const bu in building){
+    const value = building[bu];
+    console.log(bu,value);
+}
