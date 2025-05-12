@@ -1,21 +1,41 @@
 // practice problem 1:
-const arr = [12,10,15,17];
-let sum = 0;
-let avg = 0;
-function isEvenNumber(array){
-    for(const Arr of array){
-        if(Arr % 2 !== 0){
-            sum += Arr;
-            let arraylength =array.length;
-            avg += sum/arraylength;
+function isEvenNumber(array) {
+    let sum = 0;
+    let count = 0;
+
+    for (const num of array) {
+        if (num % 2 === 0) {
+            sum += num;
+            count++;
         }
-        
     }
-    console.log(avg);
+
+    if (count === 0) {
+        console.log("There is no Even Number");
+    } else {
+        let avg = sum / count;
+        console.log("Average of ",count," even number:", avg);
+    }
 }
+
+const arr = [10,20,15, 17];
 isEvenNumber(arr);
 
+
 // practice problem 2:
+function oddToEven(arr1){
+    let arr3 = [];
+    for(const arr2 of arr1){
+        if(arr2 % 2 != 0){
+           let arr4 = arr2*2;
+           arr3.push(arr4);
+        }
+    }
+    return arr3;   
+}
+
+const arr5=[15,32,32,12,15]
+console.log(oddToEven(arr5));
 // practice problem 3:
 // practice problem 4:
 // practice problem 5:
