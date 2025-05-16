@@ -1,4 +1,10 @@
 // practice problem 1:
+function addThreeNumber(num1 = 0,num2=0,num3=0){
+    const add = num1+num2+num3;
+    console.log(add);
+}
+addThreeNumber(0,12,0);
+
 // practice problem 2:
 // practice problem 3:
 // practice problem 4:
