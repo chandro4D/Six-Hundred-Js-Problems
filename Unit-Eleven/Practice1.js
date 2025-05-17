@@ -6,6 +6,12 @@ function addThreeNumber(num1 = 0,num2=0,num3=0){
 addThreeNumber(0,12,0);
 
 // practice problem 2:
+function moneyDeposit(tk=50){
+    const addMoney = tk ;
+    return addMoney;
+}
+console.log(moneyDeposit());
+
 // practice problem 3:
 // practice problem 4:
 // practice problem 5:
