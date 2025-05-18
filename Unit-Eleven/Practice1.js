@@ -13,8 +13,30 @@ function moneyDeposit(tk=50){
 console.log(moneyDeposit());
 
 // practice problem 3:
+function nameAndIncome(name = "Anonymous",income=0){
+    console.log(name,"Monthly income is:",income);
+}
+let nam="Chandra Shekhor Mondal";
+let moIncome=4000 ;
+nameAndIncome(nam,moIncome);
+
 // practice problem 4:
+function square(Num){
+    if(isNaN(Num)){
+        return 1;
+    }
+    else{
+        return Num*Num;
+    }
+}
+let Num1 = "Chandra Shekhor Mondal";
+console.log(square(Num1));
+
 // practice problem 5:
+function productAndPrice(Name="Unknown Product",Price=1){
+    console.log(Name,"price is:",Price);
+}
+productAndPrice("Book",100);
 // practice problem 6:
 // practice problem 7:
 // practice problem 8:
