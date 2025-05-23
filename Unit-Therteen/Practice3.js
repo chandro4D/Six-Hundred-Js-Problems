@@ -1,12 +1,5 @@
 // practice problem 1:
-const friends = ["Akibur","Alvi","Sujit","Sabina","Prianka"]
-const FirstFriend = () => friends[0]
-console.log(FirstFriend());
-
 // practice problem 2:
-const mulOfThreeNum = (num1,num2,num3) => num1*num2*num3
-console.log(mulOfThreeNum(1,2,3));
-
 // practice problem 3:
 // practice problem 4:
 // practice problem 5:
