@@ -1,6 +1,4 @@
 // practice problem 1:
-// practice problem 2:
-// practice problem 3:
 const product = {
     name:"Laptop",
     price:50000,
@@ -8,6 +6,9 @@ const product = {
 }
 const {brand} = product;
 console.log(brand);
+
+// practice problem 2:
+// practice problem 3:
 
 // practice problem 4:
 // practice problem 5:
