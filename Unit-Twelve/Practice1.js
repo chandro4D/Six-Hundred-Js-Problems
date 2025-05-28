@@ -8,6 +8,13 @@ const {brand} = product;
 console.log(brand);
 
 // practice problem 2:
+const item = {
+    Name: "Mobile",
+    Price: 20000,
+    Phone: "Sumsung"
+}
+const {Phone,Price}=item;
+console.log("Phone:", Phone,",","Price:",Price);
 // practice problem 3:
 
 // practice problem 4:
