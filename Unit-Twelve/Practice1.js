@@ -35,6 +35,12 @@ const Eight = eight;
 console.log(Two,Eight);
 
 // practice problem 6:
+const digits = [2,4,6,8];
+const [two,,,eight] = digits;
+const Two = two;
+const Eight = eight;
+console.log(Two,Eight);
+
 // practice problem 7:
 // practice problem 8:
 // practice problem 9:
