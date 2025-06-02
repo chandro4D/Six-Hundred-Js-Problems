@@ -35,8 +35,26 @@ const Eight = eight;
 console.log(Two,Eight);
 
 // practice problem 6:
+function multiply([a,b]) {
+    return [a*3 ,b*3];
+}
+const arr = [2,3];
+const [First,SeconD]= multiply(arr);
+
+console.log(First,SeconD);
 
 // practice problem 7:
+const person = {
+    NamE:"Rahim",
+    city: "Dhaka"
+}
+const {NamE , city , phone = "N/a"} = person;
+console.log(NamE,city,phone);
+
 // practice problem 8:
-// practice problem 9:
-// practice problem 10:
+const teacher = {
+    NAME: "Maria",
+    profession: "Teacher"
+}
+const {NAME,profession:job} = teacher;
+console.log(NAME,job);
