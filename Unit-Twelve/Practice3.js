@@ -16,10 +16,31 @@ const fullStackDev = [...frontEnd,...backEnd,...dataBase];
 console.log(fullStackDev);
 
 // practice problem 4:
+const website = {
+    name: "MySite",
+    type: "e-commerce",
+    status: "Active"
+}
+const newWeb = {...website,theme: "Dark"};
+console.log(newWeb);
 
 // practice problem 5:
+const young = {
+    Name: "Arif",
+    age: 30,
+    country: "B Baria"
+}
+const {country, ...details} = young;
+const Young = {...details};
+console.log(Young);
+
+
 // practice problem 6:
-// practice problem 7:
-// practice problem 8:
-// practice problem 9:
-// practice problem 10:
+const car = {
+    make: "Toyota",
+    model: "Corolla",
+    year: 2020
+}
+const Car = {...car};
+const newCar = {...Car , year: 2032};
+console.log(newCar);
