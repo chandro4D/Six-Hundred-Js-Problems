@@ -26,7 +26,20 @@ const Numbers = [7,10,15,20,25,30];
 Numbers.forEach(Num => console.log(Num / 3));
 
 // practice problem 6:
+const  Friends = ["Leonardo","Brad Pitt","Kate Winslet","Audrey Hepburn","Johnny Depp"];
+const thirdLetter = Friends.map(Lett => Lett[2]);
+console.log(thirdLetter);
+
 // practice problem 7:
+const namE = ["Tom","Harry","Sam","Jack"];
+const startWithH = namE.find(WithH => WithH[0] == "H");
+console.log(startWithH);
+
 // practice problem 8:
+const array = [1,2,3,4,5];
+const ele = array.forEach(arr => console.log(arr) );
+
+
 // practice problem 9:
-// practice problem 10:
+const animals = ["Cow","Goat","Sheep","Horse"];
+animals.forEach(any => console.log(any));
