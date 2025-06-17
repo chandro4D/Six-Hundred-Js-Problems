@@ -1,4 +1,7 @@
 // practice problem 1:
+const string = "Hi ";
+console.log(string.repeat(10));
+
 // practice problem 2:
 // practice problem 3:
 // practice problem 4:
