@@ -3,11 +3,10 @@ const string = "Hi ";
 console.log(string.repeat(10));
 
 // practice problem 2:
+const JavaScript = "I Am Learning JavaScript.JavaScript is Amazing.";
+console.log(JavaScript.replace("JavaScript","Js"));
+
 // practice problem 3:
-// practice problem 4:
-// practice problem 5:
-// practice problem 6:
-// practice problem 7:
-// practice problem 8:
-// practice problem 9:
-// practice problem 10:
+const fruit = "I Love Apples And Apples Are Tasty.";
+console.log(fruit.replaceAll("Apples","Mangoes"));
+
