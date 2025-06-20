@@ -19,10 +19,3 @@ let newVersion = language;
 newVersion.location = "Browser";
 console.log(language,newVersion);
 
-// practice problem 4:
-
-// practice problem 5:
-
-// practice problem 6:
-
-// practice problem 7:
