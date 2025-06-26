@@ -1,13 +1,19 @@
+
 // practice problem 1:
+const start = "786";
+console.log(Number(start));
 
 // practice problem 2:
+const willAttend = 0;
+console.log(Boolean(willAttend));
 
 // practice problem 3:
-
-// practice problem 4:
+const obj = new Object;
+obj.city = "Khulna";
+obj.country = "Bangladesh";
+console.log(obj);
 
 // practice problem 5:
+const total = 1970;
 
-// practice problem 6:
-
-// practice problem 7:
+console.log(String(total));
