@@ -13,10 +13,3 @@ const sentence2 = "I am eating apple.apple is good.apple helps me a lot.";
 const changeSen1 = sentence2.replace(/apple/g,"JavaScript");
 console.log(changeSen1);
 
-// practice problem 4:
-
-// practice problem 5:
-
-// practice problem 6:
-
-// practice problem 7:
