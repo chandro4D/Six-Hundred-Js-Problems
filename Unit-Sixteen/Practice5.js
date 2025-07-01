@@ -18,10 +18,3 @@ console.log(deleteSet);
 // practice problem 4:
 const setToArray = [...new Set([1,2,3,4,2,1,5,5])];
 console.log(setToArray);
-
-
-// practice problem 5:
-
-// practice problem 6:
-
-// practice problem 7:
