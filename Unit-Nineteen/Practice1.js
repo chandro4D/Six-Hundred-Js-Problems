@@ -38,6 +38,15 @@ const whetherString = JSON.stringify(whether);
 console.log(whetherString);
 
 // practice problem 5:
+const movieDetails = {
+    title: "Moyner Bap",
+    releaseYear: 2025,
+    actors: ["A","B","C","D","E"],
+    actorsRating: [5,6,5,9,10]
+};
+const movieDetailsJson = JSON.stringify(movieDetails);
+const movieDetailsParse = JSON.parse(movieDetailsJson);
+console.log(movieDetailsParse);
 
 // practice problem 6:
 
