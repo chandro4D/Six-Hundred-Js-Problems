@@ -10,7 +10,14 @@ const getUser = new Promise((resolve,reject)=>{
 })
 
 // practice problem 2:
-
+const payment = new Promise((resolve,reject)=>{
+    const amount = 45;
+    if(amount > 0){
+        resolve("Payment Process Is Successful");
+    }else{
+        reject("Payment Rejected");
+    }
+})
 
 // practice problem 3:
 

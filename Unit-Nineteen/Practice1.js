@@ -49,5 +49,31 @@ const movieDetailsParse = JSON.parse(movieDetailsJson);
 console.log(movieDetailsParse);
 
 // practice problem 6:
+const projectManagementSystem = {
+    projects: ["Project_1","Project_2"],
+    Project_1:{
+        name: "Butterfly",
+        project_Description: "Butterfly Is A Book Exchange Platform,Where a user can exchange their Books",
+        team_member: ["Chandra","Shamya Roy","Robus","Anas"],
+        deadlines: "30/12/25",
+        tasks: {
+            title: "Title",
+            assignee: "Assignee",
+            status:"Finished"
+        }
+    },
+    Project_2:{
+        name: "HealthHaven",
+        project_Description: "HealthHaven Is A E-Commerce Platform,Where a user can buy their medicine",
+        team_member: ["Chandra","Bindu"],
+        deadlines: "30/12/25",
+        tasks: {
+            title: "Title",
+            assignee: "Assignee",
+            status:"Finished"
+        }
+    }
+}
+console.log(JSON.stringify(projectManagementSystem));
 
 // practice problem 7:
