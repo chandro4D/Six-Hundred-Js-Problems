@@ -77,3 +77,29 @@ const projectManagementSystem = {
 console.log(JSON.stringify(projectManagementSystem));
 
 // practice problem 7:
+const courses = {
+    Web_Development: {
+        course_title:"Web Development By Jhankar Mahbub",
+        instructor_name:"Jhankar Mahbub",
+        duration:"Six Month",
+        lessons:["Html","Css","Js","MongoDB","Node Js"],
+        difficulty_Level:"Beginner"
+    },
+    Web_NextLevel: {
+        course_title:"Next Level Web Development",
+        instructor_name:"",
+        duration:"Six Month",
+        lessons:["Ts","PostGres SQL"],
+        difficulty_Level:"Advanced"
+    },
+    Phytron: {
+        course_title:"Phytron",
+        instructor_name:"",
+        duration:"12 Month",
+        lessons:["Ds","Dsa","C","C++","Java"],
+        difficulty_Level:"Beginner"
+    }
+}
+console.log(JSON.stringify(courses));
+
+// practice problem 8:
