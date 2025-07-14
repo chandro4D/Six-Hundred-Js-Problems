@@ -1,5 +1,9 @@
 // practice problem 1:
-
+   /* JavaScript is a programming language used to make web pages interactive.
+       Object is a data structure format in Js ,used to store data.
+       JSON string is a string format used to store and exchange data. 
+   */
+  
 // practice problem 2:
 const user = {
     name: "Chandra Shekhor Mondal",
@@ -103,3 +107,16 @@ const courses = {
 console.log(JSON.stringify(courses));
 
 // practice problem 8:
+const product_Review = {
+    product_Name: "Smart Watch",
+    reviewer_Details: {
+        name: "Chandra Shekhor Mondal",
+        email: "chandroshakhor@gmail.com"
+    },
+    rating: 5,
+    review_text: "This smart watch is very nice.It is a 5atm water resistance smart Watch"
+}
+const product_Review_Json = JSON.stringify(product_Review);
+const product_Review_Js_Object = JSON.parse(product_Review_Json);
+console.log(product_Review_Json);
+console.log(product_Review_Js_Object);
