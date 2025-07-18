@@ -36,8 +36,3 @@ function sendEmail(email) {
 }
 sendEmail("chandra10@gmail.com");
 
-// practice problem 4:
-
-
-// practice problem 5:
-
