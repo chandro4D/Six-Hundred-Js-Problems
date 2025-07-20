@@ -28,6 +28,3 @@
        UPDATE/PUT/PATCH--->Used for update data.
        DELETE---------->Used for remove data from the server.
     */
-// practice problem 6:
-
-// practice problem 7:
