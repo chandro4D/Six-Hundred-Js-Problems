@@ -68,6 +68,3 @@ function accountDeletion(Name) {
 }
 const NAME = "Chandra";
 accountDeletion(NAME);
-// practice problem 6:
-
-// practice problem 7:
