@@ -6,6 +6,11 @@
 */
 
 // practice problem 2:
+fetch('https://jsonplaceholder.typicode.com/user/2')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error("Error",error))
+
 async function fetchUser() {
     try {
         const response = await fetch('https://jsonplaceholder.typicode.com/user/2');
@@ -19,8 +24,26 @@ async function fetchUser() {
 fetchUser();
 
 // practice problem 3:
-
+   /*
+     When we need to work with asynchronous task one after another ,then we need to write
+     a callback function.These callback function look like a pyramid from a side.So these 
+     callback function call Callback hell or Pyramid of Doom.
+     When we need to work  asynchronous task we use callback hell.Callback hell is not easy
+     to manage and use so we can use async-await instead of callback hell.async-await is easy
+     to use and maintain.
+   */
+  
 // practice problem 4:
+async function allPost() {
+    try{
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts?userId=1');
+        const AllPost = await response.json();
+        console.log(AllPost);
+    }catch(error){
+        console.log("Error",error);
+    }
+};
+allPost()
 
 // practice problem 5:
 async function commentLoad() {
