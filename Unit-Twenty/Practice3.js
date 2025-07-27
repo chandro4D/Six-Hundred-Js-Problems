@@ -35,12 +35,35 @@ console.log(grapes);
         The  variable value is 19.Because, When we use ORassignment operator(||=) 
         for a truthy value then it`s value unchanged.
    */
+
 // practice problem 6 :
+let apples = 20;
+apples -= 10;
+console.log(apples);
 
 // practice problem 7 :
+let price = undefined;
+price ||= 90;
+console.log(price);
+    /*
+        We know that when we use OR assignment operator(||=) ,then for undefined,null,
+        falsy value it replace the old value with the new one.
+    */
 
 // practice problem 8 :
+let tomato = 0;
+tomato &&= 5;
+console.log(tomato);
+    /*
+        The tomato variable value is 0.Because, When we use AND assignment operator(&&=) 
+        for a falsy value then it`s value remain unchanged.
+   */
 
 // practice problem 9 :
-
-// practice problem 10:
+let Apples = 15;
+Apples %= 6;
+console.log(Apples);
+     /*
+        It is a modulus assignment operator(%=).It calculate the remainder.So,Here the output
+        or remainder is 3.
+     */
