@@ -4,12 +4,43 @@
      behavior.An object is an instance of a class that contains actual values.
   */
 // practice problem 2:
+  /*
+      A class instance is a specific object created from a class. 
+  */
 
 // practice problem 3 :
+class Vehicle {
+  constructor(brand,model,price){
+    this.brand = brand,
+    this.model = model,
+    this.price = price
+  }
+}
+const BMW_X5 = new Vehicle("BMW","X5",1200000);
+const Tesla_X5 = new Vehicle("Tesla","Model3",40000);
+console.log(BMW_X5,Tesla_X5);
 
 // practice problem 4 :
+class Worker {
+  constructor(id,name,hoursWorked){
+    this.id = id,
+    this.name = name,
+    this.hoursWorked = hoursWorked
+  }
+}
+const newWorker = new Worker(101,"Tom Cruise",40);
+console.log(newWorker);
 
 // practice problem 5 :
+class Library {
+  constructor(name,books,location){
+    this.name = name,
+    this.books = books,
+    this.location = location
+  }
+}
+const newLibrary = new Library("Central Library",10000,"Dhaka");
+console.log(newLibrary instanceof Library);
 
 // practice problem 6 :
 
