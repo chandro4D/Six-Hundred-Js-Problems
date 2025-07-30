@@ -43,7 +43,14 @@ const newLibrary = new Library("Central Library",10000,"Dhaka");
 console.log(newLibrary instanceof Library);
 
 // practice problem 6 :
+class Classroom {
+  constructor(section,teacher){
+    students: [],
+    this.section = section,
+    this.teacher = teacher
+  }
+}
+const newInstance = new Classroom("A","Mr. Plumber");
+console.log(newInstance);
 
 // practice problem 7 :
-
-
