@@ -54,3 +54,25 @@ const newInstance = new Classroom("A","Mr. Plumber");
 console.log(newInstance);
 
 // practice problem 7 :
+class Product {
+  constructor(name,category,stock){
+    this.name = name,
+    this.category = category,
+    this.stock = stock
+  }
+}
+const newProduct =new Product("mobile","Electronics",50);
+console.log(newProduct);
+
+// practice problem 8 :
+class Product1 {
+  constructor(name,category,stock = 0){
+    this.name = name,
+    this.category = category,
+    this.stock = stock
+  }
+}
+const newProduct1 =new Product1("mobile","Electronics",50);
+const newProduct2 =new Product1("mobile","Electronics");
+console.log(newProduct1);
+console.log(newProduct2);
