@@ -164,16 +164,12 @@ return 3.14 * radius * radius;
 }
 
 function getAreaOfCircle2(radius) {
-return 3.14 * radius * radius; // Repeated logic ❌
+return 3.14 * radius * radius;
 }
 function getCircleArea(radius) {
   return 3.14 * radius * radius;
 }
 
 console.log(getCircleArea(5));
-console.log(getCircleArea(10)); // Logic reused ✅
-
+console.log(getCircleArea(10)); 
 */
-// practice problem 8 :
-
-// practice problem 9 :
