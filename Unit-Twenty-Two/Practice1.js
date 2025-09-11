@@ -10,5 +10,11 @@
             In a browser, when we console.log(this) or run this, the value of this will be a
             window or global object.
         */
+// practice problem 3 :
+       /*
+            when we use this inside of a normal object method function, then that
+            this will refer to that object but when we declare this inside of an arrow
+            function it will refer to the window or global object.
+        */
 
 
