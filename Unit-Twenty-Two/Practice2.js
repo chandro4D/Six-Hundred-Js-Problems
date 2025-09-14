@@ -10,5 +10,15 @@
 
 // practice problem 6 :
 
+// practice problem 7 :
 
+// practice problem 8 :
+
+// practice problem 9 :
+
+// practice problem 10 :
+
+// practice problem 11 :
+
+// practice problem 12 :
 
