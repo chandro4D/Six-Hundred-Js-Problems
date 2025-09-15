@@ -1,5 +1,16 @@
 // practice problem 1:
 
+const laptop = {
+    brand: "Dell",
+    getBrand: () => {
+        console.log(laptop.brand)
+    }
+}
+const mobile = {
+    brand: laptop.getBrand()
+}
+mobile.brand
+
 // practice problem 2:
 
 // practice problem 3 :
