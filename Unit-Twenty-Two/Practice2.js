@@ -27,9 +27,4 @@ mobile.brand
 
 // practice problem 9 :
 
-// practice problem 10 :
-
-// practice problem 11 :
-
-// practice problem 12 :
 
