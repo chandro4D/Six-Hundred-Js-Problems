@@ -2,19 +2,41 @@
 
 const laptop = {
     brand: "Dell",
-    getBrand: () => {
-        console.log(laptop.brand)
+    getBrand: function () {
+        console.log(this.brand)
     }
 }
+laptop.getBrand()
+
 const mobile = {
-    brand: laptop.getBrand()
+    brand: "ASUS"
 }
-mobile.brand
+laptop.getBrand.call(mobile);
 
 // practice problem 2:
+/*   
+   There are a few key rules for this in JavaScript:
+
+           1.Global / Strict mode
+           2.Method call (obj.method())
+           3.Simple function call (func())
+           4.Constructor call (new Func())
+           5.Explicit binding (call, apply, bind)
+           6.Arrow functions (() => {})
+*/
+
 
 // practice problem 3 :
-
+const manager = {
+    name: 'Rana',
+    tasks: ['code review', 'meeting'],
+    assignWork: function (newTask) {
+        // Inside this method, 'this' refers to the object calling it.
+        this.tasks.push(newTask);
+        console.log('Tasks now:', this.tasks);
+    },
+}
+manager.assignWork('write docs');
 // practice problem 4 :
 
 // practice problem 5 :
@@ -26,5 +48,6 @@ mobile.brand
 // practice problem 8 :
 
 // practice problem 9 :
+
 
 
