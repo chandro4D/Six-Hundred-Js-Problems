@@ -37,17 +37,6 @@ const manager = {
     },
 }
 manager.assignWork('write docs');
-// practice problem 4 :
-
-// practice problem 5 :
-
-// practice problem 6 :
-
-// practice problem 7 :
-
-// practice problem 8 :
-
-// practice problem 9 :
 
 
 
