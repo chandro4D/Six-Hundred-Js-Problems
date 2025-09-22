@@ -35,21 +35,33 @@ const truck = {
 car.drive.call(truck);
 
 // practice problem 3 :
+const employee = {
+    name: "Chandra Shekhor Mondal",
+    role: "Software Engineer",
+    details () {
+        console.log(`Name: ${this.name}, Role: ${this.role}`);
+    }
+}
+employee.details();
+const manager = {
+    name: "Bindu Shekhor Mondal",
+    role: "Project Manager",
+}
+employee.details.apply(manager);
 
 // practice problem 4 :
+const classroom = {
+    name : "Web Development",
+    students : ["Chandra","Bindu","Rana","Nabonita","Rahul","Nabodip"],
+    attendance () {
+        console.log(`Class: ${this.name}, Students: ${this.students.join(", ")}`);
+    }
+}
+classroom.attendance();
+const lab = {
+    name : "Web development Lab",
+    students : ["Chandra","Bindu","Rana","Nabonita"],
+}
+const labInfo = classroom.attendance.bind(lab);
+labInfo();
 
-// practice problem 5 :
-
-// practice problem 6 :
-
-// practice problem 7 :
-
-// practice problem 8 :
-
-// practice problem 9 :
-
-// practice problem 10 :
-
-// practice problem 11 :
-
-// practice problem 12 :
