@@ -1,4 +1,7 @@
 // practice problem 1:
+commentNums++;
+let commentNums = 20;
+console.log(commentNums);
 
 // practice problem 2:
 
