@@ -16,19 +16,3 @@
         program. It is needed because it provides the foundation for code execution and acts as the 
         starting point for all other execution contexts.
     */
-   
-// practice problem 3 :
-
-// practice problem 4 :
-
-// practice problem 5 :
-
-// practice problem 6 :
-
-// practice problem 7 :
-
-// practice problem 8 :
-
-// practice problem 9 :
-
-// practice problem 10:
