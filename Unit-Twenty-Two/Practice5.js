@@ -24,6 +24,7 @@ console.log(views);
 
 // practice problem 4 :
 
+
 // practice problem 5 :
 
    /*
@@ -42,6 +43,8 @@ console.log(views);
 
    */
 
+
+
 // practice problem 6 :
    /*
       Both let and var are hoisted, but their behavior is different. Variables declared 
@@ -49,4 +52,7 @@ console.log(views);
       variables stay uninitialized in the temporal dead zone (TDZ) until their actual 
       declaration is reached, causing a `ReferenceError` if accessed early.
    */
+
+
+      
 // practice problem 7 :
