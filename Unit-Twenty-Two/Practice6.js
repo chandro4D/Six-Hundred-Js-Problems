@@ -7,7 +7,6 @@
        variables and functions through scoping and the call stack.
   */
 
-
 // practice problem 2:
     /*
         The global execution context is the default environment created when JavaScript code starts running. 

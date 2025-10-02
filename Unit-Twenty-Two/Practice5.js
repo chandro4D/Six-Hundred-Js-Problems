@@ -4,13 +4,11 @@ let commentNums = 20;
 console.log(commentNums);
 // Get this "ReferenceError: Cannot access 'commentNums' before initialization" error
 
-
 // practice problem 2:
 views/2;
 const views = 500;
 console.log(views);
 // Get this "ReferenceError: Cannot access 'views' before initialization" error
-
 
 // practice problem 3 :
  
@@ -20,7 +18,6 @@ console.log(views);
       It’s important because it prevents accidental use of variables before declaration, making code safer and 
       more predictable.
    */
-
 
 // practice problem 4 :
 
@@ -43,8 +40,6 @@ console.log(views);
 
    */
 
-
-
 // practice problem 6 :
    /*
       Both let and var are hoisted, but their behavior is different. Variables declared 
@@ -53,6 +48,4 @@ console.log(views);
       declaration is reached, causing a `ReferenceError` if accessed early.
    */
 
-
-      
 // practice problem 7 :
