@@ -1,4 +1,5 @@
 // practice problem 1:
+
 commentNums++;
 let commentNums = 20;
 console.log(commentNums);
@@ -6,6 +7,7 @@ console.log(commentNums);
 
 
 // practice problem 2:
+
 views/2;
 const views = 500;
 console.log(views);
@@ -13,6 +15,7 @@ console.log(views);
 
 
 // practice problem 3 :
+
    /*
       The Temporal Dead Zone (TDZ) in JavaScript is the time between when a `let` or `const` variable is 
       hoisted and when it’s initialized. Accessing the variable during this period throws a **ReferenceError**. 
@@ -25,6 +28,7 @@ console.log(views);
 
 
 // practice problem 5 :
+
    /*
       In JavaScript, variables declared with var are hoisted to the top of their scope, 
       meaning the declaration is moved up during the compilation phase but not the 
@@ -43,6 +47,7 @@ console.log(views);
 
 
 // practice problem 6 :
+
    /*
       Both let and var are hoisted, but their behavior is different. Variables declared 
       with `var` are initialized with `undefined` at the top of their scope, while `let` 

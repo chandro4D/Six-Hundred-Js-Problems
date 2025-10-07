@@ -1,5 +1,4 @@
 // practice problem 1:
-
      /*
         In JavaScript, a closure is created when a function "remembers" the variables from its lexical scope, 
         even after that outer function has finished executing. This means the inner function can access and 
@@ -9,7 +8,6 @@
 
 
 // practice problem 2:
-
      function fridgeTracker() {
         let count = 0;
         return function(){
@@ -25,7 +23,6 @@
 
 
 // practice problem 3 :
-
      function taskTracker() {
         let taskFinished = 0;
         return function(){
