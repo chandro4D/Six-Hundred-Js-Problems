@@ -1,5 +1,4 @@
 // practice problem 1:
-
   /*
        In JavaScript, an execution context is the environment in which a piece of code is evaluated and 
        executed. It contains information like variables, functions, scope chain, and the value of `this`. 
@@ -10,7 +9,6 @@
 
        
 // practice problem 2:
-
     /*
         The global execution context is the default environment created when JavaScript code starts running. 
         It defines the global object (`window` in browsers, `global` in Node.js) and sets `this` to that 
