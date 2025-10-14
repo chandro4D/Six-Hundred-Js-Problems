@@ -7,3 +7,5 @@
         using reserved keywords. By enabling strict mode, developers can write cleaner, 
         more reliable and maintainable code.
     */
+
+
