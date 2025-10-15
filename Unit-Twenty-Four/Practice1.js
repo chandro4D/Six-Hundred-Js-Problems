@@ -5,19 +5,23 @@
         Both store data in key value pair and are accessible only within  in same domain.
      */
 
-
-
 // practice problem 2:
+localStorage.setItem("mode","dark");
+
+localStorage.setItem("mode","light");
+
+
 
 // practice problem 3 :
+const userToken = "abcd1234";
+sessionStorage.setItem(userToken);
+console.log(sessionStorage.getItem(userToken));
 
 // practice problem 4 :
+const userName = "Alex";
+localStorage.setItem(userName);
+localStorage.removeItem(userName);
 
 // practice problem 5 :
 history.go(-2);
-
-// practice problem 6 :
-
-// practice problem 7 :
-
 
