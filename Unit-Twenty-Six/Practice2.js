@@ -23,7 +23,7 @@ function getFoodPrice(restaurantName, foodName) {
     }
 }
 
-getFoodPrice("Pizza Place","Pepperoni Pizza");
+getFoodPrice("Pizza Place", "Pepperoni Pizza");
 
 // Task----02:
 function placeOrder(customer, restaurantName, foodItem, discountCode) {
@@ -32,11 +32,11 @@ function placeOrder(customer, restaurantName, foodItem, discountCode) {
     if (!foodPrice) {
         console.log("Food Item Not Found")
     };
-    console.log(foodPrice);
+    console.log(`Food Price Before Discount: ${foodPrice}`);
 
     if (discountCode in discountCodes) {
         foodPrice = foodPrice - (foodPrice * discountCodes[discountCode] / 100);
-        console.log(foodPrice);
+        console.log(`Food Price after discount: ${foodPrice}`);
     } else {
         console.log("Invalid Discount Code");
     }
@@ -59,5 +59,12 @@ placeOrder("Chandra Shekhor Mondal", "Pizza Place", "Pepperoni Pizza", "WELCOME1
 
 
 // Task----03:
+function totalSalesByRestaurant(restaurantName) {
+    const totalSales = orders.filter(order => order.restaurant === restaurantName && order.status === "Completed").reduce((total, order) => total + order.price, 0);
+    console.log(`Total Sales: ${totalSales}`);
+    return totalSales;
+}
+totalSalesByRestaurant("Pizza Place");
 // Task----04:
+
 // Task----05:
