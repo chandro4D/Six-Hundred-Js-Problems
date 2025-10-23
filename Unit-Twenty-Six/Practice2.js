@@ -65,6 +65,29 @@ function totalSalesByRestaurant(restaurantName) {
     return totalSales;
 }
 totalSalesByRestaurant("Pizza Place");
-// Task----04:
 
-// Task----05:
+// Task----04:
+function submitReview(orderId,restaurantName,rating,reviewStrings){
+    let testId = orders.find(Id => Id.id === orderId);
+    let restName = orders.find(ResName => ResName.restaurant === restaurantName)
+    if(!testId || !restName){
+        console.log("Please!! Don`t Give Fake Reviews Without Trying It!!!");
+    }
+    if(rating < 0 || rating > 5){
+        console.log("Please, Ensure The Ratings Are Within 0 To 5")
+    }
+    if(reviewStrings.length < 20 ){
+        console.log("Please Write At Least 20 Characters");
+    }
+    let review = {
+        id: reviews.length+1,
+        restaurant: restaurantName,
+        rating: rating,
+        reviewStrings: reviewStrings
+    };
+    reviews.push(review);
+    console.log(`Review Is Added Successfully,Your review Id Is: ${reviews.length}`)
+    return `Review Is Added Successfully,Your review Id Is: ${reviews.length}`
+
+}
+submitReview(1,"Pizza Place",5,"Pizza Place Is very good Place For Pizza");
