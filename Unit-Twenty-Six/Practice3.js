@@ -17,6 +17,9 @@ const userDatabase = (function(){
             }
             users.push(newUser);
             return true;
+        },
+        loginUser: function(name,phoneNum){
+            
         }
     };
 })();
