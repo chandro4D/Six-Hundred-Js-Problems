@@ -13,34 +13,45 @@ const userDatabase = (function () {
                 id: users.length + 1,
                 name: name,
                 pin: pin,
-                balance: 0
+                balance: 10
             }
             users.push(newUser);
-            console.log("Register New User:",newUser)
+            console.log("Register New User:", newUser)
             return true;
         },
         loginUser: function (name, Pin) {
-            if (users.find(p => p.pin === Pin)){
-                console.log("Log In Successfully..Name: ",name)
+            if (users.find(p => p.pin === Pin)) {
+                console.log("Log In Successfully..Name: ", name)
                 return true;
-            }  
-            else{
-                console.log("Your Pin Is Incorrect")
+            }
+            else {
+                console.log("Your Pin Is Incorrect Or Name")
                 return false;
-            }         
+            }
         },
-        addMoney: function(name,pin,amount){
-            if(userDatabase.loginUser(name,pin) === true){
-                console.log("valid user");
+        addMoney: function (name, pin, amount) {
+            if (userDatabase.loginUser(name, pin) === true) {
+                const IdentifyUser = users.find(n => n.name === name) && users.find(p => p.pin === pin);
+                IdentifyUser.balance +=  amount;
+                return `Your Name Is:->${name} \n${amount} Tk Added Your Account!! \nYour Current Balance Is:->${IdentifyUser.balance}`;
+            } else { 
+                return "Sorry!! We couldn’t add the money. Your amount has been refunded."
+            }
+        },
+        checkBalance: function(name,pin){
+            if(userDatabase.loginUser(name,pin)=== true){
+                const IdentifyUser = users.find(n => n.name === name) && users.find(p => p.pin === pin);
+                return `Your Name Is:-> ${name} \nYour Current Balance Is:->${IdentifyUser.balance}`;
             }else{
-                console.log("Invalid user")
+                return "You don’t have permission to check the balance.";
             }
         }
     };
 })();
-userDatabase.registerUser("Chandra",1234);
+userDatabase.registerUser("Chandra", 1234);
 userDatabase.loginUser("Chandra", 1234);
-userDatabase.addMoney("Chandra", 123);
+console.log(userDatabase.addMoney("Chandra", 1234, 10))
+console.log(userDatabase.checkBalance("Chandra", 1234))
 
 
 
