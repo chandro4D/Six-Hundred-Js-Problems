@@ -13,7 +13,7 @@ const userDatabase = (function () {
                 id: users.length + 1,
                 name: name,
                 pin: pin,
-                balance: 10
+                balance: 100
             }
             users.push(newUser);
             console.log("Register New User:", newUser)
@@ -45,13 +45,35 @@ const userDatabase = (function () {
             }else{
                 return "You don’t have permission to check the balance.";
             }
+        },
+        sendMoney: function(senderName,senderPin,receiverName,sendAmount){
+            if(userDatabase.loginUser(senderName,senderPin) !== true){
+                console.log("You don’t have the permission to SendMoney.")
+            }else{
+                const IdentifySender = users.find(n => n.name === senderName) && users.find(p => p.pin === senderPin);
+                if(IdentifySender.balance >= sendAmount){
+                    const IdentifyReceiver = users.find(n => n.name === receiverName);
+                    if(!IdentifyReceiver){
+                        console.log("Money Receiver is not found!!")
+                    }else{
+                        IdentifySender.balance = IdentifySender.balance - sendAmount;
+                        IdentifyReceiver.balance = IdentifyReceiver.balance + sendAmount;
+                        console.log("Your Money Is Send Successfully!!\n");
+                    }
+                }else{
+                    console.log("Your Account Have Not Enough Money");
+                }
+            }
         }
     };
 })();
 userDatabase.registerUser("Chandra", 1234);
-userDatabase.loginUser("Chandra", 1234);
-console.log(userDatabase.addMoney("Chandra", 1234, 10))
-console.log(userDatabase.checkBalance("Chandra", 1234))
+userDatabase.registerUser("Bindu",2345);
+// userDatabase.loginUser("Chandra", 1234);
+// console.log(userDatabase.addMoney("Chandra", 1234, 10))
+// console.log(userDatabase.checkBalance("Chandra", 1234))
+
+userDatabase.sendMoney("Chandra",1234,"Bindu",10);
 
 
 
