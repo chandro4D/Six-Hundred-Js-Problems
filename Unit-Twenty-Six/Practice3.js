@@ -64,7 +64,11 @@ const userDatabase = (function () {
                     console.log("Your Account Have Not Enough Money");
                 }
             }
-        }
+        },
+        
+        transactionHistory: [
+
+        ]
     };
 })();
 userDatabase.registerUser("Chandra", 1234);
