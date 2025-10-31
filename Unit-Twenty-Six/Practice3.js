@@ -1,5 +1,6 @@
 const userDatabase = (function () {
     const users = [];
+    const sendMoneyFee = 15;
     return {
         registerUser: function (name, pin) {
             if (!name || !pin) {
@@ -51,13 +52,13 @@ const userDatabase = (function () {
                 console.log("You don’t have the permission to SendMoney.")
             }else{
                 const IdentifySender = users.find(n => n.name === senderName) && users.find(p => p.pin === senderPin);
-                if(IdentifySender.balance >= sendAmount){
+                if(IdentifySender.balance >= sendAmount+sendMoneyFee){
                     const IdentifyReceiver = users.find(n => n.name === receiverName);
                     if(!IdentifyReceiver){
                         console.log("Money Receiver is not found!!")
                     }else{
-                        IdentifySender.balance = IdentifySender.balance - sendAmount;
-                        IdentifyReceiver.balance = IdentifyReceiver.balance + sendAmount;
+                        IdentifySender.balance = IdentifySender.balance - (sendAmount + sendMoneyFee);
+                        IdentifyReceiver.balance = IdentifyReceiver.balance + (sendAmount - sendMoneyFee);
                         console.log("Your Money Is Send Successfully!!\n");
                     }
                 }else{
@@ -75,10 +76,12 @@ userDatabase.registerUser("Chandra", 1234);
 userDatabase.registerUser("Bindu",2345);
 // userDatabase.loginUser("Chandra", 1234);
 // console.log(userDatabase.addMoney("Chandra", 1234, 10))
-// console.log(userDatabase.checkBalance("Chandra", 1234))
+
+
 
 userDatabase.sendMoney("Chandra",1234,"Bindu",10);
-
+console.log(userDatabase.checkBalance("Chandra", 1234))
+console.log(userDatabase.checkBalance("Bindu",2345))
 
 
 // Task:->01
