@@ -14,7 +14,7 @@ const userDatabase = (function () {
                 id: users.length + 1,
                 name: name,
                 pin: pin,
-                balance: 100
+                balance:0
             }
             users.push(newUser);
             console.log("Register New User:", newUser)
