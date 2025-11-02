@@ -1,6 +1,13 @@
 const userDatabase = (function () {
     const users = [];
     const sendMoneyFee = 15;
+    const transactionHistory = [];
+
+
+    function getCurrentTime() {
+        return new Date().toLocaleString();
+    };
+
     return {
         registerUser: function (name, pin) {
             if (!name || !pin) {
@@ -14,7 +21,7 @@ const userDatabase = (function () {
                 id: users.length + 1,
                 name: name,
                 pin: pin,
-                balance:0
+                balance: 100
             }
             users.push(newUser);
             console.log("Register New User:", newUser)
@@ -33,63 +40,62 @@ const userDatabase = (function () {
         addMoney: function (name, pin, amount) {
             if (userDatabase.loginUser(name, pin) === true) {
                 const IdentifyUser = users.find(n => n.name === name) && users.find(p => p.pin === pin);
-                IdentifyUser.balance +=  amount;
+                IdentifyUser.balance += amount;
+
                 return `Your Name Is:->${name} \n${amount} Tk Added Your Account!! \nYour Current Balance Is:->${IdentifyUser.balance}`;
-            } else { 
+            } else {
                 return "Sorry!! We couldn’t add the money. Your amount has been refunded."
             }
         },
-        checkBalance: function(name,pin){
-            if(userDatabase.loginUser(name,pin)=== true){
+        checkBalance: function (name, pin) {
+            if (userDatabase.loginUser(name, pin) === true) {
                 const IdentifyUser = users.find(n => n.name === name) && users.find(p => p.pin === pin);
                 return `Your Name Is:-> ${name} \nYour Current Balance Is:->${IdentifyUser.balance}`;
-            }else{
+            } else {
                 return "You don’t have permission to check the balance.";
             }
         },
-        sendMoney: function(senderName,senderPin,receiverName,sendAmount){
-            if(userDatabase.loginUser(senderName,senderPin) !== true){
-                console.log("You don’t have the permission to SendMoney.")
-            }else{
+        sendMoney: function (senderName, senderPin, receiverName, sendAmount) {
+            if (userDatabase.loginUser(senderName, senderPin) !== true) {
+                return "You don’t have the permission to SendMoney.";
+            } else {
                 const IdentifySender = users.find(n => n.name === senderName) && users.find(p => p.pin === senderPin);
-                if(IdentifySender.balance >= sendAmount+sendMoneyFee){
+                if (IdentifySender.balance >= sendAmount + sendMoneyFee) {
                     const IdentifyReceiver = users.find(n => n.name === receiverName);
-                    if(!IdentifyReceiver){
-                        console.log("Money Receiver is not found!!")
-                    }else{
+                    if (!IdentifyReceiver) {
+                        return "Money Receiver is not found!!";
+                    } else {
                         IdentifySender.balance = IdentifySender.balance - (sendAmount + sendMoneyFee);
                         IdentifyReceiver.balance = IdentifyReceiver.balance + (sendAmount - sendMoneyFee);
-                        console.log("Your Money Is Send Successfully!!\n");
+
+                        const transaction = {
+                            type: "SendMoney",
+                            sender: IdentifySender.name,
+                            receiver: IdentifyReceiver.name,
+                            amount: sendAmount,
+                            fee: sendMoneyFee,
+                            time: getCurrentTime()
+                        }
+                        transactionHistory.push(transaction);
+                        console.log(transactionHistory);
+
+                        return "Your Money Is Send Successfully!!\n";
                     }
-                }else{
-                    console.log("Your Account Have Not Enough Money");
+                } else {
+                    return "Your Account Have Not Enough Money";
                 }
             }
         },
-        
-        transactionHistory: [
 
-        ]
+
     };
 })();
 userDatabase.registerUser("Chandra", 1234);
-userDatabase.registerUser("Bindu",2345);
+userDatabase.registerUser("Bindu", 2345);
 // userDatabase.loginUser("Chandra", 1234);
 // console.log(userDatabase.addMoney("Chandra", 1234, 10))
 
+console.log(userDatabase.sendMoney("Chandra", 1234, "Bindu", 10))
 
-
-userDatabase.sendMoney("Chandra",1234,"Bindu",10);
 console.log(userDatabase.checkBalance("Chandra", 1234))
-console.log(userDatabase.checkBalance("Bindu",2345))
-
-
-// Task:->01
-
-// Task:->02
-
-// Task:->03
-
-// Task:->04
-// Task:->05
-// Task:->06
+console.log(userDatabase.checkBalance("Bindu", 2345))
