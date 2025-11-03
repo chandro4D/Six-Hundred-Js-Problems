@@ -66,7 +66,7 @@ const userDatabase = (function () {
                         return "Money Receiver is not found!!";
                     } else {
                         IdentifySender.balance = IdentifySender.balance - (sendAmount + sendMoneyFee);
-                        IdentifyReceiver.balance = IdentifyReceiver.balance + (sendAmount - sendMoneyFee);
+                        IdentifyReceiver.balance = IdentifyReceiver.balance + sendAmount ;
 
                         const transaction = {
                             type: "SendMoney",
@@ -77,7 +77,7 @@ const userDatabase = (function () {
                             time: getCurrentTime()
                         }
                         transactionHistory.push(transaction);
-                        console.log(transactionHistory);
+                        console.log("Transaction History",transactionHistory);
 
                         return "Your Money Is Send Successfully!!\n";
                     }
