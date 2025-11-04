@@ -15,8 +15,15 @@ class TodoApp{
     remove(){
 
     }
-    complete(){
-
+    completeTodo(taskName){
+      const findTask = todos.find(task => task.TaskName === taskName);
+      if(!findTask){
+        return false;
+      }
+      else{
+        findTask.completed = true;
+        return true;
+      }
     }
     display(){
 
