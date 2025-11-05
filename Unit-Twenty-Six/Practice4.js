@@ -12,8 +12,11 @@ class TodoApp{
         }
         todos.push(task);
     }
-    remove(){
-
+    removeTodo(taskName){
+      const findTask = todos.find(task => task.TaskName === taskName);
+      const TaskIndex = todos.indexOf(findTask);
+      todos.splice(TaskIndex,1);
+      
     }
     completeTodo(taskName){
       const findTask = todos.find(task => task.TaskName === taskName);
