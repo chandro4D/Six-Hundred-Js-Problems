@@ -28,7 +28,12 @@ class TodoApp{
         return true;
       }
     }
-    display(){
-
+    displayTodoList(taskCategory){
+      if(!taskCategory){
+        console.log(todos)
+      }else{
+        const findTask = todos.filter(task => task.TaskCategory === taskCategory);
+        console.log(findTask);
+      }
     }
 }
