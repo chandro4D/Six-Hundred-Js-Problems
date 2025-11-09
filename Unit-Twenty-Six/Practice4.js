@@ -37,11 +37,22 @@ class TodoApp {
     }
   }
   hoursWorked() {
-    const totalTime = todos.reduce((sun,task) => sum + task.TaskDuration,0 );
+    const totalTime = todos.reduce((sum,task) => sum + task.TaskDuration,0 );
     console.log(totalTime);
   }
   timeNeeded(){
     const totalTime = this.todos.reduce((SumIncompleteTaskTime,task) => task.completed === false? SumIncompleteTaskTime + task.TaskDuration : SumIncompleteTaskTime);
     console.log(totalTime);
+  }
+  editTodo(taskName,{}){
+
+  }
+  getTodo(taskName){
+    const findTask = todos.find(task => task.TaskName === taskName);
+    if(!findTask){
+      return undefined;
+    }else{
+      return findTask;
+    }
   }
 } 
