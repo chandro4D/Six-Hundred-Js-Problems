@@ -48,11 +48,19 @@ class TodoApp {
 
   }
   getTodo(taskName){
-    const findTask = todos.find(task => task.TaskName === taskName);
+    const findTask = this.todos.find(task => task.TaskName === taskName);
     if(!findTask){
       return undefined;
     }else{
       return findTask;
     }
+  }
+  largestTodo(){
+    const findIncompleteLargeTask = this.todos.reduce((largestTask,task) => task.TaskDuration > largestTask.TaskDuration ? task : largestTask);
+    return findIncompleteLargeTask;
+  }
+  SmallestTodo(){
+    const findIncompleteSmallTask = this.todos.reduce((smallestTask,task) => task.TaskDuration < smallestTask.TaskDuration ? task : smallestTask);
+    return findIncompleteSmallTask;
   }
 } 
